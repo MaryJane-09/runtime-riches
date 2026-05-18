@@ -41,7 +41,7 @@ func Introduction() {
 		Color("QUESTION 10 → HIGHER SAFE POINT", "\033[1;36m"),
 		Color("QUESTION 15 → FINAL SAFE POINT", "\033[1;36m"),
 		"",
-		Color("LIFELINES AVAILABLE:", "\033[1;36m"),
+		Color("TYPE LIFELINE TO SEE AVAILABLE LIFELINES:", "\033[1;36m"),
 		Color("1. 50:50 - REMOVE TWO WRONG OPTIONS", "\033[1;36m"),
 		Color("2. HINT - SMALL CLUE", "\033[1;36m"),
 		Color("3. SUGGESTION - GUIDED HELP", "\033[1;36m"),

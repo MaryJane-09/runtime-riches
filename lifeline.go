@@ -33,7 +33,7 @@ func CreatorsSuggestions(i int) {
 }
 
 func FiftyFifty(input []string, i int) []string {
-	data, err := os.ReadFile("fiftyfifty.txt")
+	data, err := os.ReadFile("fifty_fifty.txt")
 	if err != nil {
 		fmt.Println(err)
 	}

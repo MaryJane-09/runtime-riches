@@ -72,13 +72,19 @@ func Question() {
 			} else {
 				TypeEffectFast([]string{
 					"",
-					Color("YOU HAVE NO CURRENT PRIZE THEREFORE YOU ARE WALKING AWAY EMPTY", "\033[1;31m"),
+					Color("YOU HAVE NOT ANSWERED ANY QUESTION AND HAVE NO CURRENT PRIZE THEREFORE YOU ARE WALKING AWAY EMPTY", "\033[1;31m"),
 					Color("DO YOU STILL WANT TO PROCEED?", "\033[1;31m"),
 					"",
 					Color("IF YES?", "\033[1;33m"),
 				})
 				fmt.Println(Color("PRESS ENTER TO CONTINUE...", "\033[1;33m"))
 				reader.ReadString('\n')
+				var word = []string{
+					"",
+					Color("SEE YOU NEXT TIME ON RUNTIME RICHES - LEEF CENTER EDITION SERIES 1", "\033[1;96m"),
+					"\n",
+				}
+				TypeEffectFast(word)
 				return
 			}
 		}
@@ -90,7 +96,7 @@ func Question() {
 
 				TypeEffectFast([]string{
 					Color("YOU ARE OUT OF LIFELINES", "\033[1;31m"),
-					Color("PROCEED TO ANSWER THE QUESTION BY YOURSELF CHOOSE WALKAWAY", "\033[31m"),
+					Color("PROCEED TO ANSWER THE QUESTION BY YOURSELF OR CHOOSE TO WALKAWAY", "\033[1;31m"),
 					"",
 				})
 
