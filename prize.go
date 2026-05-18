@@ -14,6 +14,7 @@ func AccessingPrize() {
 	var words = []string{
 		Color("TO ACCESS YOUR REWARD YOU WILL HAVE TO DROP YOUR BANK DETAILS HERE", "\033[1;33m"),
 		Color("FORMAT; <account number> <bankname>", "\033[1;33m"),
+		"",
 	}
 	TypeEffectFast(words)
 input:

@@ -68,6 +68,7 @@ func Question() {
 				fmt.Print(Color("PRESS ENTER TO CONTINUE...", "\033[1;33m"))
 				reader.ReadString('\n')
 				AccessingPrize()
+				return
 			} else {
 				TypeEffectFast([]string{
 					"",
