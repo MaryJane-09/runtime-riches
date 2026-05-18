@@ -1,0 +1,159 @@
+QUESTION 1: What will this print? x := 10 fmt.Println(x / 4)
+A. 2.5
+B. 2
+C. 3
+D. error
+B
+1,000
+
+QUESTION 2: What happens if you read from a nil map in Go?
+A. Panic
+B. Returns zero value
+C. Compile error
+D. Returns nil
+B
+2,000
+
+QUESTION 3: What will happen here? var m map[string]int m["a"] = 1
+A. Works fine
+B. Panic
+C. Compile error
+D. Returns nil
+B
+5,000
+
+QUESTION 4: What is the output?  fmt.Println(len([]int{}))
+A. 0
+B. nil
+C. 1
+D. error
+A
+10,000
+
+QUESTION 5: What happens when a nil pointer is dereferenced in Go?
+A. Returns 0
+B. Panic
+C. Compile error
+D. Safe execution
+B
+20,000
+
+QUESTION 6: What is the result of this expression? fmt.Println(true && false || true)
+A. true
+B. false
+C. error
+D. nil
+A
+40,000
+
+QUESTION 7: What happens when you range over a nil slice?
+A. Panic
+B. Compile error
+C. Zero iterations
+D. Returns nil
+C
+80,000
+
+QUESTION 8: What is printed? fmt.Println(3 + 2*2)
+A. 10
+B. 7
+C. 8
+D. 9
+B
+150,000
+
+QUESTION 9: What does append() return?
+A. Original slice
+B. New slice
+C. Nil
+D. Pointer only
+B
+300,000
+
+QUESTION 10: What is the time complexity of map lookup in Go (average case)?
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n²)
+C
+500,000
+
+QUESTION 11: What happens if a goroutine panics and is not recovered?
+A. Only goroutine stops
+B. Program continues
+C. Program crashes
+D. Ignored
+C
+750,000
+
+QUESTION 12: What is the zero value of a bool in Go?
+A. true
+B. false
+C. nil
+D. undefined
+B
+1,000,000
+
+QUESTION 13: What is the output? fmt.Println(len("Go🚀"))
+A. 3
+B. 6
+C. 5
+D. depends on encoding
+B
+1,500,000
+
+QUESTION 14: What does defer do in Go?
+A. Runs immediately
+B. Runs at end of function
+C. Cancels function
+D. Runs in goroutine
+B
+2,000,000
+
+QUESTION 15: What is printed? x := 5 fmt.Println(&x)
+A. 5
+B. memory address
+C. nil
+D. error
+B
+3,000,000
+
+QUESTION 16: What happens when you close a closed channel?
+A. Ignored
+B. Panic
+C. Deadlock
+D. Reopens channel
+B
+5,000,000
+
+QUESTION 17: What is the output? fmt.Println(10 / 3)
+A. 3.33
+B. 3
+C. 4
+D. error
+B
+7,000,000
+
+QUESTION 18: What does recover() work with?
+A. panic inside defer
+B. loops
+C. goroutines only
+D. maps
+A
+10,000,000
+
+QUESTION 19: What is true about slices in Go?
+A. Fixed size
+B. Reference type
+C. Immutable
+D. Value only
+B
+15,000,000
+
+QUESTION 20: What happens if main() exits while goroutines are still running?
+A. Goroutines continue
+B. Program waits
+C. Program exits immediately
+D. Deadlock occurs
+C
+20,000,000
