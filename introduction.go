@@ -7,21 +7,26 @@ import (
 	"strings"
 	"time"
 )
+	var reader = bufio.NewReader(os.Stdin)
+	var name, _ = reader.ReadString('\n')
+
+
 
 func Introduction() {
-	ClearScreen()
 
+ClearScreen()
 	fmt.Println("PLEASE INPUT YOUR NAME TO SIGN UP")
-	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Print("FULLNAME: ")
-	name, _ := reader.ReadString('\n')
-	name = strings.TrimSpace(name)
+
+	input := User{
+		Name: strings.TrimSpace(name),
+	}
+	fmt.Println(input.Name)
 
 	fmt.Println()
-	fmt.Printf("HELLO, %v\n\n", Capitalize(name))
+	fmt.Printf("HELLO, %v\n\n", Capitalize(input.Name))
 	time.Sleep(1 * time.Second)
-
 	lines := []string{
 		Color("WELCOME TO RUNTIME RICHES - LEEF CENTER EDITION SERIES 1", "\033[1;36m"),
 		Color("...", "\033[1;36m"),
@@ -48,7 +53,7 @@ func Introduction() {
 		"",
 		Color("ONCE USED... THEY CANNOT BE USED AGAIN.", "\033[1;36m"),
 		Color("...", "\033[1;36m"),
-		Color("TYPE <help> FOR HELP", "\033[36m"),
+		Color("TYPE <help> FOR HELP", "\033[1;36m"),
 		Color("ARE YOU READY?", "\033[1;36m"),
 	}
 

@@ -8,7 +8,8 @@ import (
 	"time"
 )
 
-func Question() {
+
+func Question(input User) {
 	data, err := os.ReadFile("question.txt")
 	if err != nil {
 		fmt.Println(err)
@@ -42,8 +43,8 @@ func Question() {
 		})
 		fmt.Println(Color(maps[i][0], "\033[1;37m"))
 		TypeEffectFast([]string{
-			fmt.Sprintf("%-20s %-s", maps[i][1], maps[i][2]),
-			fmt.Sprintf("%-20s %-s", maps[i][3], maps[i][4]),
+			fmt.Sprintf("%-20s %-20s", maps[i][1], maps[i][2]),
+			fmt.Sprintf("%-20s %-20s", maps[i][3], maps[i][4]),
 		})
 
 	start:
@@ -67,7 +68,7 @@ func Question() {
 				})
 				fmt.Print(Color("PRESS ENTER TO CONTINUE...", "\033[1;33m"))
 				reader.ReadString('\n')
-				AccessingPrize()
+				AccessingPrize(input)
 				return
 			} else {
 				TypeEffectFast([]string{
@@ -207,17 +208,17 @@ func Question() {
 			if question < 10 && question >= 5 {
 				fmt.Println(Color("THE PRIZE FOR YOUR PREVIOUS GUARANTEED LEVEL IS ₦20,000", "\033[1;32m"))
 				time.Sleep(3 * time.Second)
-				AccessingPrize()
+				AccessingPrize(input)
 			}
 			if question < 15 && question >= 10 {
 				fmt.Println(Color("THE PRIZE FOR YOUR PREVIOUS GUARANTEED LEVEL IS ₦500,000", "\033[1;32m"))
 				time.Sleep(3 * time.Second)
-				AccessingPrize()
+				AccessingPrize(input)
 			}
 			if question < 20 && question >= 15 {
 				fmt.Println(Color("THE PRIZE FOR YOUR PREVIOUS GUARANTEED LEVEL IS ₦3,000,000", "\033[1;32m"))
 				time.Sleep(3 * time.Second)
-				AccessingPrize()
+				AccessingPrize(input)
 			}
 
 			fmt.Println()
@@ -226,8 +227,8 @@ func Question() {
 	}
 
 	var words = []string{
-		Color("CONGRATULATIONS YOU HAVE WON ₦20,000,000", "\033[1;33m"),
+		fmt.Sprintf(Color("CONGRATULATIONS %v YOU HAVE WON ₦20,000,000", "\033[1;33m"), input.Name),
 	}
 	TypeEffectFast(words)
-	AccessingPrize()
+	AccessingPrize(input)
 }

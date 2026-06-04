@@ -1,6 +1,12 @@
 package main
 
+type User struct {
+	Name string
+}
+
 func main() {
-	//Introduction()
-	Question()
+
+	Introduction()
+	input := User{}
+	Question(input)
 }

@@ -7,7 +7,12 @@ import (
 	"strings"
 )
 
-func AccessingPrize() {
+
+func AccessingPrize(input User) {
+
+	input.Name = name
+	fmt.Println(input.Name)
+		
 
 	reader := bufio.NewReader(os.Stdin)
 	ClearScreen()
@@ -22,7 +27,7 @@ input:
 
 	bankDetails, _ := reader.ReadString('\n')
 	bankDetails = strings.TrimSpace(strings.ToLower(bankDetails))
-	details := strings.Split(bankDetails, " ")
+	details := strings.SplitN(bankDetails, " ", 2)
 	if len(details) != 2 {
 		fmt.Println(Color("YOU DID NOT FOLLOW THE FORMAT <account number> <bankname>", "\033[1;31m"))
 		fmt.Println(Color("TRY AGAIN", "\033[1;31m"))
@@ -48,7 +53,7 @@ input:
 		}
 	}
 
-	fmt.Printf(Color("OK WE'VE GOT YOUR DETAILS: %v\n", "\033[1;32m"), bankDetails)
+	fmt.Printf(Color("OK %v WE'VE GOT YOUR DETAILS: %v\n", "\033[1;32m"), input.Name, bankDetails)
 	fmt.Println(Color("FOR ANY COMPLAINT CONTACT US AT; 07036702434 or 09133440339", "\033[1;32m"))
 	fmt.Println(Color("THANK YOU FOR YOUR TIME", "\033[1;32m"))
 	fmt.Println()

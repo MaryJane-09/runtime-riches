@@ -18,22 +18,28 @@ func ClearScreen() {
 	command.Run()
 }
 
-func TypeEffectFast(word []string) {
-	for _, line := range word {
+func TypeEffectFast(words []string) {
+	for _, line := range words {
 		for _, char := range line {
 			fmt.Print(string(char))
-			time.Sleep(100 * time.Millisecond)
+
+			if char != ' ' {
+				time.Sleep(150 * time.Millisecond)
+			}
 		}
 		fmt.Println()
-		time.Sleep(900 * time.Millisecond)
+		time.Sleep(90 * time.Millisecond)
 	}
 }
 
-func TypeEffectSlow(word []string) {
-	for _, line := range word {
+func TypeEffectSlow(words []string) {
+	for _, line := range words {
 		for _, char := range line {
 			fmt.Print(string(char))
-			time.Sleep(400 * time.Millisecond)
+
+			if char != ' ' {
+				time.Sleep(150 * time.Millisecond)
+			}
 		}
 		fmt.Println()
 		time.Sleep(900 * time.Millisecond)
@@ -50,3 +56,4 @@ func Capitalize(s string) string {
 	}
 	return strings.Join(word, " ")
 }
+
