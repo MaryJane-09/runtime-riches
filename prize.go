@@ -11,7 +11,6 @@ import (
 func AccessingPrize(input User) {
 
 	input.Name = name
-	fmt.Println(input.Name)
 		
 
 	reader := bufio.NewReader(os.Stdin)
@@ -53,7 +52,7 @@ input:
 		}
 	}
 
-	fmt.Printf(Color("OK %v WE'VE GOT YOUR DETAILS: %v\n", "\033[1;32m"), input.Name, bankDetails)
+	fmt.Printf(Color("OK %v WE'VE GOT YOUR DETAILS: %v\n", "\033[1;32m"), Capitalize(input.Name), bankDetails)
 	fmt.Println(Color("FOR ANY COMPLAINT CONTACT US AT; 07036702434 or 09133440339", "\033[1;32m"))
 	fmt.Println(Color("THANK YOU FOR YOUR TIME", "\033[1;32m"))
 	fmt.Println()

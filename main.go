@@ -5,8 +5,8 @@ type User struct {
 }
 
 func main() {
-
-	Introduction()
+ 	//fmt.Print("hi")
+	//Introduction()
 	input := User{}
 	Question(input)
 }

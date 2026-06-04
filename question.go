@@ -227,7 +227,7 @@ func Question(input User) {
 	}
 
 	var words = []string{
-		fmt.Sprintf(Color("CONGRATULATIONS %v YOU HAVE WON ₦20,000,000", "\033[1;33m"), input.Name),
+		fmt.Sprintf(Color("CONGRATULATIONS %v YOU HAVE WON ₦20,000,000", "\033[1;33m"), Capitalize(input.Name)),
 	}
 	TypeEffectFast(words)
 	AccessingPrize(input)

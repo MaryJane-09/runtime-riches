@@ -7,22 +7,20 @@ import (
 	"strings"
 	"time"
 )
+	var _, err = fmt.Print("PLEASE INPUT YOUR NAME TO SIGN UP\nFULLNAME: ")
 	var reader = bufio.NewReader(os.Stdin)
-	var name, _ = reader.ReadString('\n')
+	var name, _ = reader.ReadString(' ')
 
 
 
 func Introduction() {
+	fmt.Println(err)
 
 ClearScreen()
-	fmt.Println("PLEASE INPUT YOUR NAME TO SIGN UP")
-
-	fmt.Print("FULLNAME: ")
 
 	input := User{
 		Name: strings.TrimSpace(name),
 	}
-	fmt.Println(input.Name)
 
 	fmt.Println()
 	fmt.Printf("HELLO, %v\n\n", Capitalize(input.Name))
