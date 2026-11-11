@@ -1,12 +1,19 @@
 package main
 
-type User struct {
-	Name string
-}
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
- 	//fmt.Print("hi")
-	//Introduction()
-	input := User{}
-	Question(input)
+	questions, err := loadQuestions()
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "Cannot load Runtime Riches:", err)
+		os.Exit(1)
+	}
+
+	if err := play(os.Stdin, os.Stdout, questions); err != nil {
+		fmt.Fprintln(os.Stderr, "Runtime Riches:", err)
+		os.Exit(1)
+	}
 }

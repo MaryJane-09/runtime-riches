@@ -1,26 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io"
+)
 
-func AskForHelp() {
-	lines := []string{
-		"",
-		Color("GUARANTEED LEVELS:", "\033[1;35m"),
-		Color("QUESTION 5  → SAFE POINT", "\033[1;35m"),
-		Color("QUESTION 10 → HIGHER SAFE POINT", "\033[1;35m"),
-		Color("QUESTION 15 → FINAL SAFE POINT", "\033[1;35m"),
-		"",
-		Color("LIFELINES AVAILABLE:", "\033[1;35m"),
-		Color("1. 50:50 - REMOVE TWO WRONG OPTIONS", "\033[1;35m"),
-		Color("2. HINT - SMALL CLUE", "\033[1;35m"),
-		Color("3. SUGGESTION - GUIDED HELP. BEWARE- YOU ARE NOT BOUND TO THEM SYSTEMS CAN MAKE MISTAKES", "\033[1;35m"),
-		Color("ONCE USED... THEY CANNOT BE USED AGAIN.", "\033[1;35m"),
-		"",
-		Color("WALKAWAY - TO LEAVE WITH YOUR CURRENT PRIZE.", "\033[1;35m"),
-		"",
-	}
-
-	for _, line := range lines {
-		fmt.Println(line)
-	}
+func AskForHelp(output io.Writer) {
+	fmt.Fprintln(output, "Answer with A, B, C, or D. A wrong answer ends the round.")
+	fmt.Fprintln(output, "Questions 5, 10, and 15 lock in guaranteed prizes once answered correctly.")
+	fmt.Fprintln(output, "WALKAWAY lets you keep your current in-game prize after you confirm.")
+	fmt.Fprintln(output, "Type LIFELINE to use 50:50, Hint, or Suggestion. Each is available once per round.")
+	fmt.Fprintln(output, "50:50 removes two wrong answers. Treat the suggestion as advice.")
 }
